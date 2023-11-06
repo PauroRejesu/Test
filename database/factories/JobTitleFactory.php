@@ -15,13 +15,14 @@ class JobTitleFactory extends Factory
     {
         return [
             'jobDesc' => $this->faker->word,
+            'jobTitleDesc' => $this->faker->text(150),
             'isBoss' => rand(0,1),
             'isPresident' => rand(0,1),
             'salary' => rand(100000,999999),
 
             //------Relations-------------------------//
-            'employeeRelation'=> rand(1010000000,1019999999),
-            'createUser'=> rand(1,10),
+            'employee_id'=> rand(1,100),
+            'user_create_id'=> rand(1,5),
         ];
     }
 }

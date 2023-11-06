@@ -9,8 +9,7 @@ class EmployeeList extends Component
 {
     public function render()
     {
-        $employees = Employee::latest()->with('employee')->take(9)->get();
-
+        $employees = Employee::latest()->with('employee')->take(21)->get();
          return view('livewire.employee-list', compact('employees'));
     }
     

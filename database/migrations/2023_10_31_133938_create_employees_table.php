@@ -14,7 +14,7 @@ class CreateEmployeesTable extends Migration
     public function up()
     {
         Schema::create('employees', function (Blueprint $table) {
-            $table->unsignedBigInteger('createUser');
+            $table->unsignedBigInteger('user_create_id');
 
             $table->id();
             $table->string('names');
@@ -23,10 +23,12 @@ class CreateEmployeesTable extends Migration
             $table->string('addres');
             $table->string('phoneNumber');
             $table->string('bornCity');
+            $table->string('bornCountry');
+            $table->string('email');
             $table->string('photo');
             $table->timestamps('createDate');
 
-            $table->foreign('createUser')->references('id')->on('users');
+            $table->foreign('user_create_id')->references('id')->on('users');
         });
     }
 

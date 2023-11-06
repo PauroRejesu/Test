@@ -19,9 +19,11 @@ class EmployeeFactory extends Factory
             'addres' =>$this->faker->text(25),
             'phoneNumber' =>rand(1236456789,987654321),
             'bornCity'=>$this->faker->text(12),
-            'employeeId' =>rand(1010000000,1019999999),
-            'photo' =>$this->faker->imageUrl(120,90),
-            'createUser'=> rand(1,10)
+            'bornCountry'=>$this->faker->text(8),
+            'email' => $this->faker->unique()->safeEmail(),
+            'employeeId' => rand(101544875,101544895),
+            'photo' => 'https://avatars2.githubusercontent.com/u/'.rand(1,200),
+            'user_create_id'=> rand(1,5)
         ];
     }
 }
