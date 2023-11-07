@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 
 Route::get('/',[ PageController::class, 'home' ])->name('home');
-Route::get('perfil/{profile:id}', [ PageController::class, 'profile'])->name('profile');
+Route::get('profileEmp/{profileEmp:id}', [ PageController::class, 'profileEmp'])->name('profileEmp');
 
 Route::middleware([
     'auth:sanctum',

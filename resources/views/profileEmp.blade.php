@@ -8,7 +8,7 @@
         <form>
             <div class="">
                 <div class="flex flex-col items-center">
-                  <img src="{{ $profile->photo }}" class="rounded-md mx-auto py-2 w-1/10">
+                  <img src="{{ $profileEmp->photo }}" class="rounded-md mx-auto py-2 w-1/10">
                   <button type="button"
                       class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Cambiar</button>
               </div>
@@ -27,10 +27,10 @@
                                 <div
                                     class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
                                     <span
-                                        class="flex select-none items-center pl-3 text-gray-500 sm:text-sm">{{ $profile->names }}</span>
+                                        class="flex select-none items-center pl-3 text-gray-500 sm:text-sm">{{ $profileEmp->names }}</span>
                                     <input type="text" name="username" id="username" autocomplete="username"
                                         class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                                        placeholder="/ {{$profile->employeeId}}">
+                                        placeholder="/ {{$profileEmp->employeeId}}">
                                 </div>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                                 class="block text-sm font-medium leading-6 text-gray-900">Nombres</label>
                             <div class="mt-2">
                                 <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" disabled value="{{$profile->names}}">
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" disabled value="{{$profileEmp->names}}">
                             </div>
                         </div>
 
@@ -76,7 +76,7 @@
                                 class="block text-sm font-medium leading-6 text-gray-900">Apellidos</label>
                             <div class="mt-2">
                                 <input type="text" name="last-name" id="last-name" autocomplete="family-name"
-                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" disabled value="{{$profile->lastNames}}">
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" disabled value="{{$profileEmp->lastNames}}">
                             </div>
                         </div>
 
@@ -85,7 +85,7 @@
                             </label>
                             <div class="mt-2">
                                 <input id="email" name="email" type="email" autocomplete="email"
-                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" disable value="{{$profile->email}}">
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" disable value="{{$profileEmp->email}}">
                             </div>
                         </div>
 
@@ -94,7 +94,7 @@
                             <div class="mt-2">
                                 <select id="country" name="country" autocomplete="country-name"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6" disabled>
-                                    <option value="{{$profile->bornCountry}}" selected>{{$profile->bornCountry}}</option>
+                                    <option value="{{$profileEmp->bornCountry}}" selected>{{$profileEmp->bornCountry}}</option>
                                     <option>Colombia</option>
                                     <option>Canada</option>
                                     <option>Mexico</option>
@@ -106,7 +106,7 @@
                             <div class="mt-2">
                                 <select id="country" name="country" autocomplete="country-name"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6" disabled>
-                                    <option value="{{$profile->bornCity}}" selected>Ciudad 1</option>
+                                    <option value="{{$profileEmp->bornCity}}" selected>Ciudad 1</option>
                                     <option>Ciudad 2</option>
                                     <option>Ciudad 3</option>
                                 </select>
@@ -119,7 +119,7 @@
                             <div class="mt-2">
                                 <input type="text" name="street-address" id="street-address"
                                     autocomplete="street-address"
-                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" disabled value="{{$profile->addres}}">
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" disabled value="{{$profileEmp->addres}}">
                             </div>
                         </div>
 

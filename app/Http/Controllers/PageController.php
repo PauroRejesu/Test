@@ -13,8 +13,8 @@ class PageController extends Controller
         {
             return view('index');
         }
-    public function profile(Employee $profile)
+    public function profileEmp(Employee $profileEmp)
         {
-            return view('profile', compact('profile'));
+            return view('profileEmp', compact('profileEmp'));
         }
 }
